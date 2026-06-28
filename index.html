@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hệ Thống CAPTCHA Cao Cấp</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+
+    <div class="captcha-card">
+        <div class="card-header">
+            <div class="shield-icon"><i class="fa-solid fa-shield-halved"></i></div>
+            <h2>Xác minh bảo mật</h2>
+            <p>Để tiếp tục, hãy nhập các ký tự trong hình</p>
+        </div>
+        
+        <div class="captcha-wrapper">
+            <canvas id="captchaCanvas" width="220" height="75"></canvas>
+            <div class="action-buttons">
+                <button type="button" id="refreshBtn" class="action-btn" title="Đổi mã khác">
+                    <i class="fa-solid fa-rotate-right"></i>
+                </button>
+                <button type="button" id="audioBtn" class="action-btn" title="Nghe đọc mã">
+                    <i class="fa-solid fa-volume-high"></i>
+                </button>
+            </div>
+        </div>
+
+        <div class="input-wrapper">
+            <input type="text" id="captchaInput" placeholder="Nhập mã bảo mật..." maxlength="6" autocomplete="off">
+            <button type="button" id="submitBtn">
+                <span>Xác nhận</span>
+                <i class="fa-solid fa-arrow-right"></i>
+            </button>
+        </div>
+        
+        <div id="messageBox" class="message-box hidden">
+            <i id="msgIcon" class="fa-solid"></i>
+            <span id="msgText"></span>
+        </div>
+    </div>
+
+</body>
+</html>
+
